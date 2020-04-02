@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="/static/css/style.css">
+		<title>{{title}}</title>
+	</head>
+	<body>
+		<div class ="Form">
+			<h1>{{title}}</h1>
+			<form action="" method="POST" enctype="multipart/form-data" >
+				{%csrf_token%}
+				{{form.as_p}}
+				<button type="submit">{{title}}</button> 
+			</form>			
+
+
+		</div>
+
+	</body>
+</html>

@@ -1,0 +1,32 @@
+{%extends "dashboard.html"%}
+{%block content%}
+ <table class="table table-bordered table-hover table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>USER</th>
+        <th>Name</th>
+        <th>CART</th>
+        <th>EMAIL</th>
+        <th>ADDRESS</th>
+        <th>PHONE NUMBER</th>
+        <th>ORDER TIME</th>
+      </tr>
+    </thead>
+    <tbody>
+      {%for check in checkouts%}
+      <tr>
+        <td>{{check.check_id}}</td>
+        <td>{{check.check_user}}</td>
+        <td>{{check.u_name}}</td>
+        <td>{{check.cart_id}}</td>
+        <td>{{check.u_email}}</td>
+        <td>{{check.u_address}}</td>
+        <td>{{check.u_number}}</td>
+        <td>{{check.check_time}}</td>
+      </tr>
+      {%endfor%}
+    </tbody>
+  </table>
+
+{%endblock content%}

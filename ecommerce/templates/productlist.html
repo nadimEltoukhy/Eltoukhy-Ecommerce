@@ -1,0 +1,31 @@
+{%extends "dashboard.html"%}
+{%block content%}
+<div class="d-flex justify-content-end bg-white">
+	
+	<a href="/add_product/" class="card-link btn btn-primary mt-3 ml-3 text-center "><h5 class="d-inline">+</h5>Add Product</a>
+	
+</br>
+	
+</div>
+<div class="card-columns">
+  {%for product in products%}
+  <div class="card shadow-lg bg-white mb-4">
+    <div class="card-header">
+      <img class="card-img-top" src="/media/{{product.p_image}}" alt="{{product.p_name}}">
+   	</div>
+   	<div class="card-body">
+   		<h4 class="text-center">{{product.p_name}}</h4>
+   	</div>
+   	<div class="card-footer">
+   		
+   		<a href="{% url 'product_edit' id=product.p_id %}" class="card-link btn btn-primary mt-3 ml-3">Edit</a>
+    	<a href="{% url 'product_delete' id=product.p_id %}" class="card-link btn btn-danger mt-3 ">Delete</a>
+    	
+
+   	</div>
+   </div>
+   {%endfor%}
+
+   
+</div>
+{%endblock content%}

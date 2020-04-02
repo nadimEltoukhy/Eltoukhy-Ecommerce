@@ -1,0 +1,25 @@
+{%extends "dashboard.html"%}
+{%block content%}
+<div class="d-flex justify-content-end bg-white">
+	
+
+	
+</br>
+	
+</div>
+<div class="card-columns">
+  {%for user in users%}
+  <div class="card shadow-lg bg-white mb-4">
+    <div class="card-header">
+      <img class="card-img-top" src="/media/user.jfif" alt="user.username">
+   	</div>
+   	<div class="card-body">
+   		<h4 class="text-center">{{user.username}}</h4>
+   	</div>
+   	
+   </div>
+   {%endfor%}
+
+   
+</div>
+{%endblock content%}
